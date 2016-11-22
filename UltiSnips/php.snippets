@@ -1,0 +1,14 @@
+priority -50
+
+snippet dd "Die and dump" b
+dd(${1:"${2:value}"});
+endsnippet
+
+snippet @test "Unit Test"
+/** @test */
+public function ${1}() {
+	${2}
+}
+endsnippet
+
+# :vim:ft=snippets:
