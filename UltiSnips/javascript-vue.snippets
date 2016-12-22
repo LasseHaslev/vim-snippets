@@ -1,0 +1,50 @@
+priority -50
+
+snippet vtemplate "Vue template" i
+template: \`
+	<${1:div}>
+		${2}
+	</$1>
+\`,
+endsnippet
+
+snippet vprops "Vue props" i
+props: {
+	${1:input}: {
+		type: ${2:String},
+		${3:default${4:: null}},
+	},
+},
+endsnippet
+
+snippet vdata "Vue data" i
+data() {
+	return {
+		${1:prop}: ${2:'${3}'},
+	}
+},
+endsnippet
+
+snippet vmethods "Vue methods" i
+methods: {
+	${1:open}() {
+		${2:return ${3:'${4}';}}
+	},
+},
+endsnippet
+
+snippet vcomponents "Vue components" i
+components: {
+	${1:Class},
+},
+endsnippet
+
+snippet @vue "Simple Vue es6 component" i
+export default {
+${1:	vtemplate${2}
+}${3:	vprops${4}
+}${5:	vdata${6}
+}${7:	vmethods${8}
+}${9:	vcomponents${10}}
+}
+endsnippet
