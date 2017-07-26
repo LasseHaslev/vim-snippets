@@ -3,3 +3,9 @@ priority -50
 snippet dd "console.log" b
 console.log(${1:"${2:value}"});
 endsnippet
+
+snippet test "ava test" b
+test( '${1:it}', t => ${2}{
+	${3}
+} );
+endsnippet
